@@ -7,12 +7,11 @@ class Ability
     end
     can :access, :info
     can :create, :feedback_messages
-    #can [:read, :create, :login, :unsubscribe], :users
-    can :access, :all
-=begin
+    can [:read, :create, :login, :unsubscribe], :users
     if user
       can :logout, :users
       can :update, :users, :id => user.id
+      can :access, :all
       unless user.banned?
         can :create, :comments
         can [:update, :destroy], :comments do |comment|
@@ -32,6 +31,5 @@ class Ability
         can :access, :all
       end
     end
-=end
   end
 end

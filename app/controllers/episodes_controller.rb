@@ -54,7 +54,7 @@ class EpisodesController < ApplicationController
     case params[:view]
     when "list" then 40
     when "grid" then 24
-    else 10
+    else 5
     end
   end
 end
