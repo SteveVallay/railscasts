@@ -11,7 +11,6 @@ class Ability
     if user
       can :logout, :users
       can :update, :users, :id => user.id
-      can :access, :all
       unless user.banned?
         can :create, :comments
         can [:update, :destroy], :comments do |comment|

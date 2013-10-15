@@ -83,7 +83,7 @@ class Episode < ActiveRecord::Base
 
   def asset_url(path, ext = nil)
     #"http://media.railscasts.com/assets/episodes/#{path}/#{asset_name}" + (ext ? ".#{ext}" : "")
-    "http://10.231.217.135/lts/#{path}/#{asset_name}" + (ext ? ".#{ext}" : "")
+    "/assets/episodes/#{path}/#{asset_name}" + (ext ? ".#{ext}" : "")
   end
 
   def padded_position
